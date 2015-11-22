@@ -1,0 +1,18 @@
+{
+  "name": "hands-on-rxjs",
+  "version": "1.0.0",
+  "description": "Sample project with RxJS and AngularJS",
+  "author": "Nicolas Payot",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "rx": "^4.0.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "webpack": "^1.12.8",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
