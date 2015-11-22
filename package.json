@@ -4,6 +4,9 @@
   "description": "Sample project with RxJS and AngularJS",
   "author": "Nicolas Payot",
   "license": "ISC",
+  "scripts": {
+    "start": "webpack-dev-server --content-base app/ --hot --progress --colors"
+  },
   "dependencies": {
     "angular": "^1.4.8",
     "rx": "^4.0.7"
