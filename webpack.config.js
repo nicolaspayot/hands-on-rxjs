@@ -8,6 +8,10 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.html$/,
+        loader: 'ng-cache'
+      },
+      {
         test: /\.scss$/,
         loader: 'style!css!autoprefixer!sass'
       },
