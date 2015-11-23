@@ -1,7 +1,5 @@
 'use strict';
 
-var webpack = require('webpack')
-
 module.exports = {
   context: __dirname + '/app',
   entry: {
@@ -11,10 +9,10 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
-        query: { cacheDirectory: true, presets: [ 'es2015' ] }
+        loader: 'babel?cacheDirectory=true&presets[]=es2015!eslint',
+        exclude: /node_modules/
       }
     ]
   },
-  devtool : 'eval'
+  devtool: 'eval'
 };
