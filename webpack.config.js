@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel?cacheDirectory=true&presets[]=es2015!eslint',
+        loader: 'ng-annotate!babel?cacheDirectory=true&presets[]=es2015!eslint',
         exclude: /node_modules/
       }
     ]
