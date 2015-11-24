@@ -1,0 +1,10 @@
+$roboto-font-path: "~materialize-css/font/roboto/";
+$icons-font-path: "~materialize-css/font/material-design-icons/";
+@import "~materialize-css/sass/materialize.scss";
+
+html {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87);
+}

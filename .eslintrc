@@ -24,7 +24,7 @@
     "space-after-keywords": 2,
     "no-var": 1,
 
-    "angular/ng_document_service": 0,
+    "angular/document-service": 0,
     "angular/log": 0
   }
 }
