@@ -1,4 +1,5 @@
 import angular from 'angular';
+import materialize from 'materialize-css/dist/js/materialize';
 import indexStyle from './index.scss';
 import app from './index.module';
 
