@@ -1,10 +1,20 @@
 'use strict';
 
+/* eslint-disable no-var */
+var webpack = require('webpack');
+
 module.exports = {
   context: __dirname + '/app',
   entry: {
     app: ['webpack/hot/dev-server', './index.js']
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      Hammer: 'hammerjs/hammer'
+    })
+  ],
   module: {
     loaders: [
       {
