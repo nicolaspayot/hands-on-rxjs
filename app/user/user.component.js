@@ -1,4 +1,4 @@
-import userHtml from './user.html';
+import view from './user.html';
 
 export const user = {
   bindings: {},
