@@ -3,9 +3,13 @@
     .row {
       margin-bottom: 0;
     }
-    .name {
-      font-size: 15px;
-      text-transform: uppercase;
+    .middle {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      .name {
+        font-size: 15px;
+        text-transform: uppercase;
+      }
     }
   }
 }
