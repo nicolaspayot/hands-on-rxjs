@@ -1,8 +1,8 @@
 import angular from 'angular';
 import header from './header/header.module';
-import user from './user/user.module';
+import users from './users/users.module';
 
 export default angular.module('handsOnRxJS', [
   header.name,
-  user.name
+  users.name
 ]);
