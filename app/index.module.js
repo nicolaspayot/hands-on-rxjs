@@ -1,5 +1,5 @@
 import angular from 'angular';
-import Rx from 'Rx';
+import Rx from 'rx';
 import _ from 'lodash';
 
 import header from './header/header.module';
