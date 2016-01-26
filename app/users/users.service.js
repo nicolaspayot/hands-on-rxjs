@@ -6,7 +6,7 @@ export class Users {
     this.$http = $http;
   }
 
-  popularObservable() {
-    return Rx.Observable.fromPromise(this.$http.get(`${this.url}?q=followers:>5000`));
+  search(languages) {
+    return Rx.Observable.fromPromise(this.$http.get(`${this.url}?q=language:${languages}+followers:>5000`));
   }
 }
