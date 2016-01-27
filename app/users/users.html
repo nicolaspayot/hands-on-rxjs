@@ -1,10 +1,10 @@
 <div class="row">
   <div class="input-field col s3">
-    <input id="username" type="text" ng-model="$ctrl.languages" ng-change="$ctrl.search()">
+    <input id="username" type="text" ng-model="$ctrl.languages" ng-change="$ctrl.search($ctrl.languages)">
     <label class="active" for="username">Programming Languages</label>
   </div>
 </div>
 
 <div ng-repeat="user in $ctrl.users | limitTo:5 track by user.id">
-  <user login="user.login" url="user.html_url"></user>
+  <user login="user.login" url="user.html_url" avatar-url="user.avatar_url"></user>
 </div>

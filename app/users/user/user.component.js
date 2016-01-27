@@ -3,7 +3,8 @@ import view from './user.html';
 export const user = {
   bindings: {
     login: '=',
-    url: '='
+    url: '=',
+    avatarUrl: '='
   },
   controller: 'UserController',
   templateUrl: 'user.html'

@@ -7,6 +7,9 @@ export class Users {
   }
 
   search(languages) {
-    return Rx.Observable.fromPromise(this.$http.get(`${this.url}?q=language:${languages}+followers:>5000`));
+    const usersPromise = this.$http.get(`${this.url}?q=language:${languages}+followers:>100`);
+    return Rx.Observable
+      .fromPromise(usersPromise)
+      .map(response => response.data.items);
   }
 }
