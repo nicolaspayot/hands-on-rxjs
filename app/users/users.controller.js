@@ -2,22 +2,26 @@ export class UsersController {
   constructor(Users, $scope) {
     'ngInject';
 
-    Object.assign(this, {
-      Users,
-      $scope,
-      searchEvent: this.observableFromFunction('search').debounce(400)
-    });
+    Object.assign(this, { Users });
 
-    this.searchEvent.subscribe(languages => {
+    this.searchEvent = this.observableWithFunction('search')
+      .debounce(400)
+      .distinctUntilChanged();
+
+    const searchSubscription = this.searchEvent.subscribe(languages => {
       this.Users.search(this.languages).subscribe(users => {
-        this.$scope.$apply(() => {
+        $scope.$apply(() => {
           this.users = users;
         });
       });
     });
+
+    $scope.$on('$destroy', () => {
+      searchSubscription.dispose();
+    });
   }
 
-  observableFromFunction(name) {
+  observableWithFunction(name) {
     const observable = new Rx.Subject();
     this[name] = value => {
       observable.onNext(value);
